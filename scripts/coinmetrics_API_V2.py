@@ -60,11 +60,11 @@ print(availmetrics)
 # print CapRealUSD for BTC
 #for val in getAssetMetric('btc', 'CapRealUSD'):
 #    print(val['time'], val['values'])
-    
+
 # print Realised price = CapRealUSD/SplyCur
 CapRealUSD = getAssetMetricFromStartDate('btc', 'CapRealUSD', '20110101')
 SplyCur = getAssetMetricFromStartDate('btc', 'SplyCur', '20110101')
-for i in range(0,len(CapRealUSD)):  
+for i in range(len(CapRealUSD)):  
     RealisedPrice_BTC = float(CapRealUSD[i]['values'][0])/float(SplyCur[i]['values'][0])
     #print(RealisedPrice_BTC)
 
